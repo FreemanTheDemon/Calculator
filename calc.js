@@ -14,20 +14,37 @@ reader.question("What would you like to calculate? ", function(input){
 	num1 = Number(tokens[1]);
 	num2 = Number(tokens[2]);
 
-	// this logs the symbol that has been inputted
-	console.log('mathSymbol', mathSymbol);
-
 	// this statement handles different operations
 	if (mathSymbol === '+') {
-		console.log(num1 + num2);
+		let result = tokens[1];
+		for (var i = 2; i < tokens.length; i++) {
+			result += tokens[i];
+		}
+		console.log(result);
 	} else if (mathSymbol === '-') {
-		console.log(num1 - num2);
+		let result = tokens[1];
+		for (var i = 2; i < tokens.length; i++) {
+			result -= tokens[i];
+		}
+		console.log(result);
 	} else if (mathSymbol === '*') {
-		console.log(num1 * num2);
+		let result = tokens[1];
+		for (var i = 2; i < tokens.length; i++) {
+			result *= tokens[i];
+		}
+		console.log(result);
 	} else if (mathSymbol === '/') {
-		console.log(num1 / num2);
+		let result = tokens[1];
+		for (var i = 2; i < tokens.length; i++) {
+			result /= tokens[i];
+		}
+		console.log(result);
 	} else if (mathSymbol === '√' || mathSymbol === 'sqrt') {
 		console.log(Math.sqrt(num1));
+	} else if (mathSymbol === '^') {
+		console.log(Math.pow(num1, num2));
+	} else if (mathSymbol === '%') {
+		console.log(num1 % num2);
 	}
 
 	// This line closes the connection to the command line interface.
