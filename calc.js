@@ -46,7 +46,7 @@ reader.question("What would you like to calculate (type 'operators' for a list o
 	} else if (mathSymbol === '%') {
 		console.log(num1 % num2);
 	} else if (mathSymbol === 'operators') {
-		console.log('OPERATORS: \n +: add \n -: subtract \n *: multiply \n /: divide \n √ OR sqrt: square root \n ^: power \n %: remainder');
+		console.log('OPERATORS: \n +:         add \n -:         subtract \n *:         multiply \n /:         divide \n √ OR sqrt: square root \n ^:         power \n %:         remainder');
 	} else {
 		console.log('INVALID INPUT');
 	}
